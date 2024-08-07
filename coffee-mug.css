@@ -1,0 +1,89 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    height: 100vh;
+    width:100vw;
+    /* we have to add border here becox we need to apply margin to container and since margin is the space around an element respect to a defined border of parent,thus parent(wrapper) must have a border.If not then margin is applied to wrapper(parent) as well becox browsers takes border of htmml body as defined border  */
+   border: 1px solid rgba(0, 0, 0, 0);
+    background-color: rgb(226, 216, 204);
+}
+.container{
+ width: 40%;
+height: 60%;
+margin: 8% 0 0 14%;
+background-color: white;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+/* AFTER APPLYING COLUMNS,THE PIC DIV WILL TAKE 100% WIDTH OF IST COLUMN ANS SINCE WE EXPLICITLY MENTIONED BELOW TO TAKE ENTIRE WIDTH AND HEIGHT OF CONTAINER,IT WONT TAKE THE ENTIRE WIDTH BECOX OF THE OTHER CONTENT BUT IT WILL TAKE ENTIRE WIDTH OF IST COLUMN*/
+
+/* border radius applied to container but will reflect on right side only becox image is on left side covering the edges */
+border-radius: 10px;
+}
+.pic{
+/* width and height is 100% of parent div(container).*/
+    width: 100%;
+    height: 100%;
+
+}
+.pic img{
+    /* width and height is 100% of parent div(pic) */
+    width: 100%;
+    height: 100%;
+    /* applying the border radius to top left and bottom left on image */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.details{
+    /* displaying it flex so that we can align the individual items */
+    display: flex;
+    flex-direction: column;
+    padding: 7%;
+    /* padding right given specifically so that text in 'p' tag can come exactly as in image */
+    padding-right: 6%;
+}
+h5{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    font-size:small;
+}
+h3{
+    font-weight: bolder;
+    font-size: larger;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 8.5em;
+}
+p{
+    font-weight:400;
+    font-size: medium;
+}
+b{
+    color: green;
+    font-size: larger;
+    font-weight: bolder;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+del{
+    color: rgb(70, 69, 69);
+    font-size: medium;
+    font-weight:bolder;
+}
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    color: white;
+    width: 85%;
+    height: 9%;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+button img{
+    margin-right: 1em;
+}
